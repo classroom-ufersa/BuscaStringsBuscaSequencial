@@ -1,6 +1,30 @@
 # PROJETO: Busca de Strings com Busca Sequencial
 ## 1. MENU
   Nosso programa inicia com um pequeno menu de 3 opções, as quas são: 1 - Cadastrar, 2 - Buscar e 3 - Sair, esse menu foi criado dentro de uma estrutura de repetição (do{ /* */ }while;) utilizando a estrutura de condição "if", "else if" e "else".
+      do {
+        printf("\nMENU:\n"); 
+        printf("1 - Cadastrar\n");
+        printf("2 - Buscar\n");
+        printf("3 - Sair\n");
+        printf("Escolha uma opcao: ");
+        scanf("%d", &opcao);
+
+        if (opcao == 1) {
+            printf("Digite o numero de funciocarios que deseja cadastrar: ");
+            scanf(" %d",&numMaxFuncionarios);
+            Funcionario funcionarios[numMaxFuncionarios];
+            cadastrar(funcionarios, numMaxFuncionarios);
+        } else if (opcao == 2) {
+            printf("Digite o nome do funcionario a ser buscado: ");
+            scanf(" %59[^\n]", nomeBusca);
+            buscar(nomeBusca, numMaxLinhas, contFuncionarios);
+        } else if (opcao == 3) {
+            printf("Muito obrigado, ate mais!\n");
+        } else {
+            printf("Opcao invalida, verifique o menu novamente.");
+        }
+
+    } while (opcao != 3);
 
 ## 1.1 Opção Cadastar
   Ao clicar nessa opção o programa pergunta ao usuário quantos clientes desejam ser cadastrados, pois assim, temos o valor máximo de clientes que podem ser cadastrados em uma iteração, então, é possível criar o vetor da estrutura "Funcionarios" no tamanho exato sem desperdiçar memória. A estrutura "Funcionarios" possuem os seguintes atributos: "nome", "cargo" e "doc", onde doc é uma variável do tipo "Documento" (estrutura aninhada), que possui os atributos "RG" e "CPF". Logo em seguida, chamamos a função "cadastrar()", passando como parâmetros o vetor criado e a variável responsável por armazenar o número máximo de funcionários, dentro da função "cadastrar()" é realizado a leitura dos dados de cada funcionário digitados pelo usuário e 
