@@ -1,6 +1,7 @@
 # PROJETO: Busca de Strings com Busca Sequencial
 ## 1. MENU
   Nosso programa inicia com um pequeno menu de 3 opções, as quas são: 1 - Cadastrar, 2 - Buscar e 3 - Sair, esse menu foi criado dentro de uma estrutura de repetição (do{ /* */ }while;) utilizando a estrutura de condição "if", "else if" e "else".
+     
       do {
         printf("\nMENU:\n"); 
         printf("1 - Cadastrar\n");
